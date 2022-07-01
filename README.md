@@ -37,7 +37,7 @@ Reto final realizado con:
 ![Reto_DDD-Analisis drawio](https://user-images.githubusercontent.com/83563182/176801062-20a4db8b-9b37-4765-96a8-a10ca8644b00.png)
 
 ### Modelamiento
-![Reto_DDD-Modelo de dominio drawio](https://user-images.githubusercontent.com/83563182/176801076-7b9a42c6-fb6c-46ec-b243-aa9b94e21944.png)
+![Reto_DDD-Modelo de dominio drawio (1)](https://user-images.githubusercontent.com/83563182/176802480-2bcb5208-a28f-4cc9-ad29-f369b0278325.png)
 
 ### Eventos de dominio
 ![Reto_DDD-Eventos de dominio drawio](https://user-images.githubusercontent.com/83563182/176801084-a442aed0-57fe-4d58-b67c-a75f8a3e6df6.png)
