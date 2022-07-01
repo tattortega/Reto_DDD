@@ -8,7 +8,7 @@ import co.com.sofkau.taller.jefedepatio.entities.Registro;
 import co.com.sofkau.taller.jefedepatio.events.AutoAgregado;
 import co.com.sofkau.taller.jefedepatio.events.ClienteAgregado;
 import co.com.sofkau.taller.jefedepatio.events.JefeDePatioAsignado;
-import co.com.sofkau.taller.jefedepatio.events.RegistroExitoso;
+import co.com.sofkau.taller.jefedepatio.events.RegistroAgregado;
 import co.com.sofkau.taller.jefedepatio.values.*;
 import co.com.sofkau.taller.mecanico.values.MecanicoId;
 import co.com.sofkau.taller.valuesgeneric.Correo;
@@ -52,7 +52,7 @@ public class JefeDePatio extends AggregateEvent<JefeDePatioId> {
 
     public void agregarRegistro(TipoDeTrabajo tipoDeTrabajo, Ingreso ingreso, AutorizacionCliente autorizacionCliente) {
         var registroId = new RegistroId();
-        appendChange(new RegistroExitoso(registroId, this.mecanicoId, this.vendedorId, tipoDeTrabajo, ingreso,
+        appendChange(new RegistroAgregado(registroId, this.mecanicoId, this.vendedorId, tipoDeTrabajo, ingreso,
                 autorizacionCliente, this.cliente, this.auto)).apply();
     }
 
