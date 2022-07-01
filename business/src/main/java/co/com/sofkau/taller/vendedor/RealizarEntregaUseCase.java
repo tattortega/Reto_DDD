@@ -6,7 +6,7 @@ import co.com.sofka.business.support.TriggeredEvent;
 import co.com.sofkau.taller.vendedor.events.EntregaRealizada;
 
 
-public class AgregarEntregaUseCase extends UseCase<TriggeredEvent<EntregaRealizada>, ResponseEvents> {
+public class RealizarEntregaUseCase extends UseCase<TriggeredEvent<EntregaRealizada>, ResponseEvents> {
     @Override
     public void executeUseCase(TriggeredEvent<EntregaRealizada> entregaRealizadaTriggeredEvent) {
         var event = entregaRealizadaTriggeredEvent.getDomainEvent();
