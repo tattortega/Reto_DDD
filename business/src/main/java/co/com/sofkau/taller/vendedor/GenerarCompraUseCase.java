@@ -6,7 +6,7 @@ import co.com.sofka.business.support.TriggeredEvent;
 import co.com.sofkau.taller.vendedor.events.CompraGenerada;
 
 
-public class AgregarCompraUseCase extends UseCase<TriggeredEvent<CompraGenerada>, ResponseEvents> {
+public class GenerarCompraUseCase extends UseCase<TriggeredEvent<CompraGenerada>, ResponseEvents> {
     @Override
     public void executeUseCase(TriggeredEvent<CompraGenerada> compraGeneradaTriggeredEvent) {
         var event = compraGeneradaTriggeredEvent.getDomainEvent();
