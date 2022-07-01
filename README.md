@@ -1,6 +1,6 @@
 ## Reto DDD
 
-Reto final realizado con:
+Reto final donde se plantea un Modelo de Dominio para un Taller Automotriz realizado con:
 
 * Java
 * DDD
@@ -34,12 +34,12 @@ Reto final realizado con:
 
 
 ### Análisis
-![Reto_DDD-Analisis drawio](https://user-images.githubusercontent.com/83563182/176801062-20a4db8b-9b37-4765-96a8-a10ca8644b00.png)
+![Reto_DDD-Analisis drawio](https://user-images.githubusercontent.com/83563182/176942090-c2a95241-b569-48f5-89cf-d4c66e64e40a.png)
 
 ### Modelamiento
-![Reto_DDD-Modelo de dominio drawio (1)](https://user-images.githubusercontent.com/83563182/176802480-2bcb5208-a28f-4cc9-ad29-f369b0278325.png)
+![Reto_DDD-Modelo de dominio drawio](https://user-images.githubusercontent.com/83563182/176942106-f3a4b35d-b0b1-440d-9cc9-d2630ed0ee61.png)
 
 ### Eventos de dominio
-![Reto_DDD-Eventos de dominio drawio](https://user-images.githubusercontent.com/83563182/176801084-a442aed0-57fe-4d58-b67c-a75f8a3e6df6.png)
+![Reto_DDD-Eventos de dominio drawio](https://user-images.githubusercontent.com/83563182/176942118-d29ad4fb-ea1c-4a5b-9fa2-11d88512e46f.png)
 
 
