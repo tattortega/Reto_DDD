@@ -7,7 +7,7 @@ import co.com.sofkau.taller.vendedor.events.FacturaGenerada;
 import co.com.sofkau.taller.vendedor.factory.FacturaFactory;
 
 
-public class AgregarFacturaUseCase extends UseCase<TriggeredEvent<FacturaGenerada>, ResponseEvents> {
+public class GenerarFacturaUseCase extends UseCase<TriggeredEvent<FacturaGenerada>, ResponseEvents> {
 
     @Override
     public void executeUseCase(TriggeredEvent<FacturaGenerada> facturaGeneradaTriggeredEvent) {
