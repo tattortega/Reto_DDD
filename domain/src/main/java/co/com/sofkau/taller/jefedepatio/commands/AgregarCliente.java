@@ -8,7 +8,13 @@ import co.com.sofkau.taller.valuesgeneric.Correo;
 import co.com.sofkau.taller.valuesgeneric.Nombre;
 import co.com.sofkau.taller.valuesgeneric.Telefono;
 
-
+/**
+ * Comando para agregar Cliente
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class AgregarCliente extends Command {
     private final ClienteId clienteId;
     private final JefeDePatioId jefeDePatioId;

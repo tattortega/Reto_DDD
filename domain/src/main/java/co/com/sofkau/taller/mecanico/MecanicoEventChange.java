@@ -12,7 +12,11 @@ import co.com.sofkau.taller.mecanico.events.ReparacionAgregada;
 import java.util.HashMap;
 
 /**
- * Controlados de eventos del agregado Mecanico
+ * Manejador de Eventos para Mecanico
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
  */
 public class MecanicoEventChange extends EventChange {
     public MecanicoEventChange(Mecanico mecanico) {

@@ -6,7 +6,11 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.taller.mecanico.commands.AgregarReparacion;
 
 /**
- * Caso de uso para que una reparacion sea iniciada
+ * Caso de uso para el evento agregar Reparacion
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
  */
 public class AgregarReparacionUseCase extends UseCase<RequestCommand<AgregarReparacion>, ResponseEvents> {
     @Override

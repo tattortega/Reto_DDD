@@ -12,12 +12,18 @@ import co.com.sofkau.taller.valuesgeneric.Telefono;
 import co.com.sofkau.taller.valuesgeneric.TipoDeTrabajo;
 import co.com.sofkau.taller.vendedor.values.VendedorId;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+/**
+ * Test para el caso de uso asignar Mecanico
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 @ExtendWith(MockitoExtension.class)
 class AsignarMecanicoUseCaseTest {
 
@@ -25,7 +31,7 @@ class AsignarMecanicoUseCaseTest {
     private AsignarMecanicoUseCase asignarMecanicoUseCase;
 
     @Test
-    public void asignarMecanico() {
+    void asignarMecanico() {
         var vendedorId = VendedorId.of("03");
         var mecanicoId = MecanicoId.of("054");
         var registroId = RegistroId.of("452");

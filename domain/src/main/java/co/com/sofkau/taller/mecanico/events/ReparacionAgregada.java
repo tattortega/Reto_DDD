@@ -6,7 +6,13 @@ import co.com.sofkau.taller.valuesgeneric.Estado;
 import co.com.sofkau.taller.valuesgeneric.Observacion;
 import co.com.sofkau.taller.valuesgeneric.TipoDeTrabajo;
 
-
+/**
+ * Evento de dominio para agregar Reparacion
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class ReparacionAgregada extends DomainEvent {
     private final ReparacionId reparacionId;
     private final TipoDeTrabajo tipoDeTrabajo;

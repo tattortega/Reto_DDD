@@ -1,9 +1,15 @@
 package co.com.sofkau.taller.vendedor.entities;
 
-
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofkau.taller.vendedor.values.*;
 
+/**
+ * Entidad Venta con sus comportamientos
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Venta extends Entity<VentaId> {
     protected TipoDePago tipoDePago;
     protected MetodoPago metodoPago;
@@ -17,7 +23,7 @@ public class Venta extends Entity<VentaId> {
         this.valorReparacion = valorReparacion;
     }
 
-    public void agregarTipoDePago(TipoDePago tipoDePago){
+    public void agregarTipoDePago(TipoDePago tipoDePago) {
         this.tipoDePago = tipoDePago;
     }
 
@@ -25,7 +31,7 @@ public class Venta extends Entity<VentaId> {
         return tipoDePago;
     }
 
-    public void agregarMetodoPago(MetodoPago metodoPago){
+    public void agregarMetodoPago(MetodoPago metodoPago) {
         this.metodoPago = metodoPago;
     }
 
@@ -33,7 +39,7 @@ public class Venta extends Entity<VentaId> {
         return metodoPago;
     }
 
-    public void agregarValorReparacion(ValorReparacion valorReparacion){
+    public void agregarValorReparacion(ValorReparacion valorReparacion) {
         this.valorReparacion = valorReparacion;
     }
 

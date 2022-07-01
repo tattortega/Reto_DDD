@@ -11,7 +11,13 @@ import co.com.sofkau.taller.vendedor.values.VendedorId;
 
 import java.util.Map;
 
-
+/**
+ * Evento de dominio para finalizar Reparacion
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class ReparacionFinalizada extends DomainEvent {
     private final VendedorId vendedorId;
     private final RegistroId registroId;

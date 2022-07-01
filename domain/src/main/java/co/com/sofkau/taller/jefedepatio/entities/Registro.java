@@ -10,8 +10,15 @@ import co.com.sofkau.taller.valuesgeneric.TipoDeTrabajo;
 
 import java.util.Map;
 
-
+/**
+ * Entidad Registro con sus comportamientos
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Registro extends Entity<RegistroId> {
+
     protected TipoDeTrabajo tipoDeTrabajo;
     protected Ingreso ingreso;
     protected AutorizacionCliente autorizacionCliente;

@@ -7,8 +7,15 @@ import co.com.sofkau.taller.valuesgeneric.Correo;
 import co.com.sofkau.taller.valuesgeneric.Nombre;
 import co.com.sofkau.taller.valuesgeneric.Telefono;
 
-
+/**
+ * Entidad Cliente con sus comportamientos
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Cliente extends Entity<ClienteId> {
+
     protected Documento documento;
     protected Nombre nombre;
     protected Telefono telefono;

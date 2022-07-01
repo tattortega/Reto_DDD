@@ -36,8 +36,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-
+/**
+ * Agregado root para Vendedor con sus atributos y comportamientos
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Vendedor extends AggregateEvent<VendedorId> {
+
     protected Nombre nombre;
     protected Telefono telefono;
     protected Correo correo;

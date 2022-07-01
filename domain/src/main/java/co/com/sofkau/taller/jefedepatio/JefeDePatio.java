@@ -20,6 +20,13 @@ import co.com.sofkau.taller.vendedor.values.VendedorId;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Agregado root para Jefe de patio con sus atributos y comportamientos
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class JefeDePatio extends AggregateEvent<JefeDePatioId> {
 
     protected MecanicoId mecanicoId;
@@ -37,7 +44,7 @@ public class JefeDePatio extends AggregateEvent<JefeDePatioId> {
     }
 
     public JefeDePatio(JefeDePatioId jefeDePatioId, MecanicoId mecanicoId, VendedorId vendedorId, Nombre nombre,
-                  Correo correo, Telefono telefono) {
+                       Correo correo, Telefono telefono) {
         super(jefeDePatioId);
         appendChange(new JefeDePatioAsignado(nombre, telefono, correo, mecanicoId, vendedorId)).apply();
         subscribe(new JefeDePatioEventChange(this));

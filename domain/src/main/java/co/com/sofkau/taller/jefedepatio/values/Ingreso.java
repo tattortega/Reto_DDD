@@ -6,7 +6,13 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-
+/**
+ * Objeto de valor para Ingreso
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Ingreso implements ValueObject<Ingreso.Props> {
 
     private final LocalDateTime horaIngreso;

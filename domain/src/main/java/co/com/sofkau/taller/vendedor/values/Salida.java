@@ -6,7 +6,14 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Salida implements ValueObject<Salida.Pros> {
+/**
+ * Objeto de valor para Salida
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
+public class Salida implements ValueObject<Salida.Props> {
 
     private final LocalDateTime horaSalida;
     private final LocalDate diaSalida;
@@ -17,8 +24,8 @@ public class Salida implements ValueObject<Salida.Pros> {
     }
 
     @Override
-    public Pros value() {
-        return new Pros() {
+    public Props value() {
+        return new Props() {
             @Override
             public LocalDateTime horaSalida() {
                 return horaSalida;
@@ -44,7 +51,7 @@ public class Salida implements ValueObject<Salida.Pros> {
         return Objects.hash(horaSalida, diaSalida);
     }
 
-    public interface Pros {
+    public interface Props {
         LocalDateTime horaSalida();
 
         LocalDate diaSalida();

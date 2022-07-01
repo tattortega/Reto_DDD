@@ -13,8 +13,15 @@ import co.com.sofkau.taller.vendedor.values.VendedorId;
 
 import java.util.Set;
 
-
+/**
+ * Entidad Factura con sus comportamientos
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Factura extends Entity<FacturaId> {
+
     protected VendedorId vendedorId;
     protected DatosCliente datosCliente;
     protected Set<DatosEmpresa> datosEmpresa;
@@ -44,14 +51,15 @@ public class Factura extends Entity<FacturaId> {
         return vendedorId;
     }
 
-    public void agregarDatosCliente(DatosCliente datosCliente){
+    public void agregarDatosCliente(DatosCliente datosCliente) {
         this.datosCliente = datosCliente;
     }
+
     public DatosCliente datosCliente() {
         return datosCliente;
     }
 
-    public void agregarDatosEmpresa(Set<DatosEmpresa> datosEmpresa){
+    public void agregarDatosEmpresa(Set<DatosEmpresa> datosEmpresa) {
         this.datosEmpresa = datosEmpresa;
     }
 
@@ -59,7 +67,7 @@ public class Factura extends Entity<FacturaId> {
         return datosEmpresa;
     }
 
-    public void agregarDatosAuto(Set<DatosAuto> datosAutos){
+    public void agregarDatosAuto(Set<DatosAuto> datosAutos) {
         this.datosAutos = datosAutos;
     }
 
@@ -67,7 +75,7 @@ public class Factura extends Entity<FacturaId> {
         return datosAutos;
     }
 
-    public void agregarListaRepuestos(Set<ListaRepuestos> listaRepuestos){
+    public void agregarListaRepuestos(Set<ListaRepuestos> listaRepuestos) {
         this.listaRepuestos = listaRepuestos;
     }
 
@@ -75,7 +83,7 @@ public class Factura extends Entity<FacturaId> {
         return listaRepuestos;
     }
 
-    public void agregarValorCompra(ValorCompra valorCompra){
+    public void agregarValorCompra(ValorCompra valorCompra) {
         this.valorCompra = valorCompra;
     }
 
@@ -83,7 +91,7 @@ public class Factura extends Entity<FacturaId> {
         return valorCompra;
     }
 
-    public void agregarValorReparacion(ValorReparacion valorReparacion){
+    public void agregarValorReparacion(ValorReparacion valorReparacion) {
         this.valorReparacion = valorReparacion;
     }
 
@@ -91,7 +99,7 @@ public class Factura extends Entity<FacturaId> {
         return valorReparacion;
     }
 
-    public void agregarValorTotal(ValorTotal valorTotal){
+    public void agregarValorTotal(ValorTotal valorTotal) {
         this.valorTotal = valorTotal;
     }
 

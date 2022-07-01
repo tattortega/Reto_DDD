@@ -4,7 +4,14 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class DatosEmpresa implements ValueObject<DatosEmpresa.Value> {
+/**
+ * Objeto de valor para DatosEmpresa
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
+public class DatosEmpresa implements ValueObject<DatosEmpresa.Props> {
 
     private final String nombreEmpresa;
     private final String descripcion;
@@ -22,8 +29,8 @@ public class DatosEmpresa implements ValueObject<DatosEmpresa.Value> {
     }
 
     @Override
-    public Value value() {
-        return new Value() {
+    public Props value() {
+        return new Props() {
             @Override
             public String nombreEmpresa() {
                 return nombreEmpresa;
@@ -49,7 +56,7 @@ public class DatosEmpresa implements ValueObject<DatosEmpresa.Value> {
         return Objects.hash(nombreEmpresa, descripcion);
     }
 
-    public interface Value {
+    public interface Props {
         String nombreEmpresa();
 
         String descripcion();

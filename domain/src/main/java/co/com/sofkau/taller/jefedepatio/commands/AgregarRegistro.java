@@ -9,7 +9,13 @@ import co.com.sofkau.taller.jefedepatio.values.JefeDePatioId;
 import co.com.sofkau.taller.jefedepatio.values.RegistroId;
 import co.com.sofkau.taller.valuesgeneric.TipoDeTrabajo;
 
-
+/**
+ * Comando para agregar Registro
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class AgregarRegistro extends Command {
     private final RegistroId registroId;
     private final JefeDePatioId jefeDePatioId;

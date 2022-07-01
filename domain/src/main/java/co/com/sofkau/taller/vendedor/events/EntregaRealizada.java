@@ -5,7 +5,13 @@ import co.com.sofkau.taller.vendedor.values.Salida;
 import co.com.sofkau.taller.vendedor.values.ValorTotal;
 import co.com.sofkau.taller.vendedor.values.VendedorId;
 
-
+/**
+ * Evento de dominio para realizar Entrega
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class EntregaRealizada extends DomainEvent {
     private final VendedorId vendedorId;
     private final Salida salida;

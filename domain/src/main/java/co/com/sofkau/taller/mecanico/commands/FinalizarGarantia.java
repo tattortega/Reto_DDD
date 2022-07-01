@@ -10,7 +10,13 @@ import co.com.sofkau.taller.valuesgeneric.Observacion;
 import co.com.sofkau.taller.valuesgeneric.TipoDeTrabajo;
 import co.com.sofkau.taller.vendedor.values.VendedorId;
 
-
+/**
+ * Comando para finalizar Garantia
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class FinalizarGarantia extends Command {
     private final VendedorId vendedorId;
     private final MecanicoId mecanicoId;

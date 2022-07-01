@@ -7,7 +7,11 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.taller.mecanico.commands.FinalizarReparacion;
 
 /**
- * Caso de uso para finalizar una reparacion
+ * Caso de uso para el evento finalizar Reparacion
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
  */
 public class FinalizarReparacionUseCase extends UseCase<RequestCommand<FinalizarReparacion>, ResponseEvents> {
 

@@ -7,7 +7,13 @@ import co.com.sofkau.taller.valuesgeneric.Correo;
 import co.com.sofkau.taller.valuesgeneric.Nombre;
 import co.com.sofkau.taller.valuesgeneric.Telefono;
 
-
+/**
+ * Evento de dominio para agregar Cliente
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class ClienteAgregado extends DomainEvent {
     private final ClienteId clienteId;
     private final Documento documento;

@@ -4,7 +4,14 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class DatosAuto implements ValueObject<DatosAuto.Value> {
+/**
+ * Objeto de valor para DatosAuto
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
+public class DatosAuto implements ValueObject<DatosAuto.Props> {
 
     private final String marca;
     private final String placa;
@@ -21,8 +28,8 @@ public class DatosAuto implements ValueObject<DatosAuto.Value> {
     }
 
     @Override
-    public Value value() {
-        return new Value() {
+    public Props value() {
+        return new Props() {
             @Override
             public String marca() {
                 return marca;
@@ -48,7 +55,7 @@ public class DatosAuto implements ValueObject<DatosAuto.Value> {
         return Objects.hash(marca, placa);
     }
 
-    public interface Value {
+    public interface Props {
         String marca();
 
         String placa();

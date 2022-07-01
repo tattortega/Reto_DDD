@@ -15,6 +15,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Agregado root para Mecanico con sus atributos y comportamientos
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Mecanico extends AggregateEvent<MecanicoId> {
 
     protected VendedorId vendedorId;
@@ -52,8 +59,8 @@ public class Mecanico extends AggregateEvent<MecanicoId> {
     }
 
     public void agregarInspeccion(Diagnostico diagnostico, Set<ListaRepuestos> listaRepuestos) {
-        var InspeccionId = new InspeccionId();
-        appendChange(new InspeccionAgregada(InspeccionId, diagnostico, listaRepuestos));
+        var inspeccionId = new InspeccionId();
+        appendChange(new InspeccionAgregada(inspeccionId, diagnostico, listaRepuestos));
     }
 
     public void agregarTrabajo(TipoDeTrabajo tipoDeTrabajo, Estado estado, Observacion observacion) {

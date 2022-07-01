@@ -27,6 +27,13 @@ import java.util.Set;
 
 import static org.mockito.Mockito.when;
 
+/**
+ * Test para el caso de uso generar Factura
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 @ExtendWith(MockitoExtension.class)
 class GenerarFacturaUseCaseTest {
 

@@ -6,7 +6,13 @@ import co.com.sofka.business.support.TriggeredEvent;
 import co.com.sofkau.taller.vendedor.events.FacturaGenerada;
 import co.com.sofkau.taller.vendedor.factory.FacturaFactory;
 
-
+/**
+ * Caso de uso para el evento generar Factura
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class GenerarFacturaUseCase extends UseCase<TriggeredEvent<FacturaGenerada>, ResponseEvents> {
 
     @Override
@@ -19,7 +25,7 @@ public class GenerarFacturaUseCase extends UseCase<TriggeredEvent<FacturaGenerad
         );
 
         FacturaFactory factory = FacturaFactory.builder()
-                .agregarFactura(
+                .generarFactura(
                         event.facturaId(), event.vendedorId(), event.datosCliente(), event.datosEmpresas(),
                         event.datosAutos(), event.listaRepuestos(), event.valorCompra(),
                         event.valorReparacion(), event.valorTotal()

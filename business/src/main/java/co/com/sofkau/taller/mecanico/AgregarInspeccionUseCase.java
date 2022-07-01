@@ -6,7 +6,11 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.taller.mecanico.commands.AgregarInspeccion;
 
 /**
- * Caso de uso para que un mecanico realice una inspeccion inicial de un vehiculo
+ * Caso de uso para el evento agregar Inspeccion
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
  */
 public class AgregarInspeccionUseCase extends UseCase<RequestCommand<AgregarInspeccion>, ResponseEvents> {
     @Override

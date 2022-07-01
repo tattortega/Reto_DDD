@@ -13,6 +13,13 @@ import co.com.sofkau.taller.vendedor.values.VentaId;
 
 import java.util.HashMap;
 
+/**
+ * Manejador de Eventos para Vendedor
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class VendedorEventChange extends EventChange {
     public VendedorEventChange(Vendedor vendedor) {
         apply((VendedorAsignado event) -> {

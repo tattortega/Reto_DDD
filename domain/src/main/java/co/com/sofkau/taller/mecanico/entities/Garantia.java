@@ -5,7 +5,13 @@ import co.com.sofkau.taller.mecanico.values.GarantiaId;
 import co.com.sofkau.taller.valuesgeneric.Estado;
 import co.com.sofkau.taller.valuesgeneric.Observacion;
 
-
+/**
+ * Entidad Garantia con sus comportamientos
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Garantia extends Entity<GarantiaId> {
 
     protected Estado estado;

@@ -19,6 +19,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Test para el caso de uso asignar Vendedor
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 @ExtendWith(MockitoExtension.class)
 class AsignarVendedorUseCaseTest {
 

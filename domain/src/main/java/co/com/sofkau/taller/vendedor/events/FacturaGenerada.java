@@ -6,7 +6,13 @@ import co.com.sofkau.taller.vendedor.values.*;
 
 import java.util.Set;
 
-
+/**
+ * Evento de dominio para generar Factura
+ *
+ * @author Ricardo Ortega <tattortega.28@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class FacturaGenerada extends DomainEvent {
     private final FacturaId facturaId;
     private final VendedorId vendedorId;
