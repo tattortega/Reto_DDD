@@ -7,7 +7,7 @@ import co.com.sofkau.taller.jefedepatio.entities.Registro;
 import co.com.sofkau.taller.jefedepatio.events.AutoAgregado;
 import co.com.sofkau.taller.jefedepatio.events.ClienteAgregado;
 import co.com.sofkau.taller.jefedepatio.events.JefeDePatioAsignado;
-import co.com.sofkau.taller.jefedepatio.events.RegistroExitoso;
+import co.com.sofkau.taller.jefedepatio.events.RegistroAgregado;
 
 import java.util.HashMap;
 
@@ -38,7 +38,7 @@ public class JefeDePatioEventChange extends EventChange {
             jefeDePatio.cliente.put(clienteId, cliente);
         });
 
-        apply((RegistroExitoso event) -> {
+        apply((RegistroAgregado event) -> {
             var registroId = event.registroId();
             var registro = new Registro(registroId, event.tipoDeTrabajo(), event.ingreso(),
                     event.autorizacionCliente(), event.cliente(), event.auto());
