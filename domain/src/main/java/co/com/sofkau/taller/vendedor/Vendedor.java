@@ -9,11 +9,9 @@ import co.com.sofkau.taller.valuesgeneric.Correo;
 import co.com.sofkau.taller.valuesgeneric.Nombre;
 import co.com.sofkau.taller.valuesgeneric.Telefono;
 import co.com.sofkau.taller.vendedor.entities.Compra;
-import co.com.sofkau.taller.vendedor.entities.Entrega;
 import co.com.sofkau.taller.vendedor.entities.Factura;
 import co.com.sofkau.taller.vendedor.entities.Venta;
 import co.com.sofkau.taller.vendedor.events.CompraGenerada;
-import co.com.sofkau.taller.vendedor.events.EntregaRealizada;
 import co.com.sofkau.taller.vendedor.events.FacturaGenerada;
 import co.com.sofkau.taller.vendedor.events.VendedorAsignado;
 import co.com.sofkau.taller.vendedor.events.VentaGenerada;
@@ -21,10 +19,8 @@ import co.com.sofkau.taller.vendedor.values.CompraId;
 import co.com.sofkau.taller.vendedor.values.DatosAuto;
 import co.com.sofkau.taller.vendedor.values.DatosCliente;
 import co.com.sofkau.taller.vendedor.values.DatosEmpresa;
-import co.com.sofkau.taller.vendedor.values.EntregaId;
 import co.com.sofkau.taller.vendedor.values.FacturaId;
 import co.com.sofkau.taller.vendedor.values.MetodoPago;
-import co.com.sofkau.taller.vendedor.values.Salida;
 import co.com.sofkau.taller.vendedor.values.TipoDePago;
 import co.com.sofkau.taller.vendedor.values.ValorCompra;
 import co.com.sofkau.taller.vendedor.values.ValorReparacion;
@@ -50,7 +46,6 @@ public class Vendedor extends AggregateEvent<VendedorId> {
     protected Correo correo;
     protected Map<CompraId, Compra> compra;
     protected Map<VentaId, Venta> venta;
-    protected Map<EntregaId, Entrega> entrega;
     protected Map<FacturaId, Factura> factura;
     protected Set<Cliente> cliente;
     protected Set<Auto> auto;
@@ -63,7 +58,7 @@ public class Vendedor extends AggregateEvent<VendedorId> {
         subscribe(new VendedorEventChange(this));
     }
 
-    private Vendedor(VendedorId entityId) {
+    public Vendedor(VendedorId entityId) {
         super(entityId);
         subscribe(new VendedorEventChange(this));
     }
@@ -83,9 +78,6 @@ public class Vendedor extends AggregateEvent<VendedorId> {
         appendChange(new VentaGenerada(vendedorId, tipoDePago, metodoPago, valorReparacion)).apply();
     }
 
-    public void crearEntrega(VendedorId vendedorId, Salida salida, ValorTotal valorTotal) {
-        appendChange(new EntregaRealizada(vendedorId, salida, valorTotal)).apply();
-    }
 
     public void crearFactura(FacturaId facturaId, VendedorId vendedorId, DatosCliente datosCliente,
                              Set<DatosEmpresa> datosEmpresa, Set<DatosAuto> datosAuto,

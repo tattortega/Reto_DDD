@@ -48,7 +48,7 @@ public class JefeDePatioEventChange extends EventChange {
         apply((RegistroAgregado event) -> {
             var registroId = event.registroId();
             var registro = new Registro(registroId, event.tipoDeTrabajo(), event.ingreso(),
-                    event.autorizacionCliente(), event.cliente(), event.auto());
+                    event.cliente(), event.auto());
             jefeDePatio.registro.put(registroId, registro);
         });
     }

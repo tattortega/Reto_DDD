@@ -2,12 +2,10 @@ package co.com.sofkau.taller.vendedor;
 
 import co.com.sofka.domain.generic.EventChange;
 import co.com.sofkau.taller.vendedor.entities.Compra;
-import co.com.sofkau.taller.vendedor.entities.Entrega;
 import co.com.sofkau.taller.vendedor.entities.Factura;
 import co.com.sofkau.taller.vendedor.entities.Venta;
 import co.com.sofkau.taller.vendedor.events.*;
 import co.com.sofkau.taller.vendedor.values.CompraId;
-import co.com.sofkau.taller.vendedor.values.EntregaId;
 import co.com.sofkau.taller.vendedor.values.FacturaId;
 import co.com.sofkau.taller.vendedor.values.VentaId;
 
@@ -31,7 +29,6 @@ public class VendedorEventChange extends EventChange {
             vendedor.auto = event.autos();
             vendedor.venta = new HashMap<>();
             vendedor.compra = new HashMap<>();
-            vendedor.entrega = new HashMap<>();
             vendedor.factura = new HashMap<>();
         });
 
@@ -45,12 +42,6 @@ public class VendedorEventChange extends EventChange {
             var compraId = new CompraId();
             var compra = new Compra(compraId, event.valorCompra());
             vendedor.compra.put(compraId, compra);
-        });
-
-        apply((EntregaRealizada event) -> {
-            var entregaId = new EntregaId();
-            var entrega = new Entrega(entregaId, event.salida(), event.valorTotal());
-            vendedor.entrega.put(entregaId, entrega);
         });
 
         apply((FacturaGenerada event) -> {

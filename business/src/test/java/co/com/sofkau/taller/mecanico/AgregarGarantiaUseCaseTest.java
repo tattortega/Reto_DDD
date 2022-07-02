@@ -51,14 +51,12 @@ class AgregarGarantiaUseCaseTest {
         when(repository.getEventsBy("054")).thenReturn(history());
         agregarGarantiaUseCase.addRepository(repository);
 
-        //act
         var events = UseCaseHandler.getInstance()
                 .setIdentifyExecutor(command.mecanicoId().value())
                 .syncExecutor(agregarGarantiaUseCase, new RequestCommand<>(command))
                 .orElseThrow()
                 .getDomainEvents();
 
-        //assert
         var event = (GarantiaAgregada) events.get(0);
         Assertions.assertEquals(TipoDeTrabajo.Tipos.GARANTIA,
                 event.tipoDeTrabajo().value());

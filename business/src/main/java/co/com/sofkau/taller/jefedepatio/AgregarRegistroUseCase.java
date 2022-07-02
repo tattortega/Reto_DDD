@@ -22,8 +22,7 @@ public class AgregarRegistroUseCase extends UseCase<RequestCommand<AgregarRegist
         var jefeDePatio = JefeDePatio.from(command.jefeDePatioId(),
                 repository().getEventsBy(command.jefeDePatioId().value()));
 
-        jefeDePatio.agregarRegistro(command.tipoDeTrabajo(), command.ingreso(),
-                command.autorizacionCliente());
+        jefeDePatio.agregarRegistro(command.tipoDeTrabajo(), command.ingreso());
 
         emit().onResponse(new ResponseEvents(jefeDePatio.getUncommittedChanges()));
     }

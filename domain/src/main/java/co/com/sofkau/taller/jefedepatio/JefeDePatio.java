@@ -57,10 +57,10 @@ public class JefeDePatio extends AggregateEvent<JefeDePatioId> {
         return jefeDePatio;
     }
 
-    public void agregarRegistro(TipoDeTrabajo tipoDeTrabajo, Ingreso ingreso, AutorizacionCliente autorizacionCliente) {
+    public void agregarRegistro(TipoDeTrabajo tipoDeTrabajo, Ingreso ingreso) {
         var registroId = new RegistroId();
         appendChange(new RegistroAgregado(registroId, this.mecanicoId, this.vendedorId, tipoDeTrabajo, ingreso,
-                autorizacionCliente, this.cliente, this.auto)).apply();
+                this.cliente, this.auto)).apply();
     }
 
     public void agregarCliente(Documento documento, Nombre nombre, Telefono telefono, Correo correo) {

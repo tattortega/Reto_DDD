@@ -36,9 +36,9 @@ public class MecanicoEventChange extends EventChange {
             mecanico.inspeccion.put(inspeccionId, inspeccion);
         });
         apply((ReparacionAgregada event) -> {
-            var repacionId = event.reparacionId();
-            var reparacion = new Reparacion(repacionId, event.estado(), event.observacion());
-            mecanico.reparacion.put(repacionId, reparacion);
+            var reparacionId = event.reparacionId();
+            var reparacion = new Reparacion(reparacionId, event.estado(), event.observacion());
+            mecanico.reparacion.put(reparacionId, reparacion);
         });
         apply((GarantiaAgregada event) -> {
             var garantiaId = event.garantiaId();

@@ -2,7 +2,6 @@ package co.com.sofkau.taller.jefedepatio.entities;
 
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofkau.taller.jefedepatio.values.AutoId;
-import co.com.sofkau.taller.jefedepatio.values.AutorizacionCliente;
 import co.com.sofkau.taller.jefedepatio.values.ClienteId;
 import co.com.sofkau.taller.jefedepatio.values.Ingreso;
 import co.com.sofkau.taller.jefedepatio.values.RegistroId;
@@ -21,18 +20,14 @@ public class Registro extends Entity<RegistroId> {
 
     protected TipoDeTrabajo tipoDeTrabajo;
     protected Ingreso ingreso;
-    protected AutorizacionCliente autorizacionCliente;
     protected Map<ClienteId, Cliente> cliente;
     protected Map<AutoId, Auto> auto;
 
 
-    public Registro(RegistroId entityId, TipoDeTrabajo tipoDeTrabajo, Ingreso ingreso,
-                    AutorizacionCliente autorizacionCliente,
-                    Map<ClienteId, Cliente> cliente, Map<AutoId, Auto> auto) {
+    public Registro(RegistroId entityId, TipoDeTrabajo tipoDeTrabajo, Ingreso ingreso, Map<ClienteId, Cliente> cliente, Map<AutoId, Auto> auto) {
         super(entityId);
         this.tipoDeTrabajo = tipoDeTrabajo;
         this.ingreso = ingreso;
-        this.autorizacionCliente = autorizacionCliente;
         this.cliente = cliente;
         this.auto = auto;
     }
@@ -53,13 +48,6 @@ public class Registro extends Entity<RegistroId> {
         this.ingreso = ingreso;
     }
 
-    public AutorizacionCliente autorizacionCliente() {
-        return autorizacionCliente;
-    }
-
-    public void agregarAutorizacionCliente(AutorizacionCliente autorizacionCliente) {
-        this.autorizacionCliente = autorizacionCliente;
-    }
 
     public Map<ClienteId, Cliente> cliente() {
         return cliente;

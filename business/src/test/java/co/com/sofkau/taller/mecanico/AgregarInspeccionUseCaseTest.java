@@ -48,7 +48,6 @@ class AgregarInspeccionUseCaseTest {
 
     @Test
     void agregarInspeccionUseCase() {
-        //arrange
         var inspeccionId = InspeccionId.of("33253");
         var mecanicoId = MecanicoId.of("054");
         var diagnostico = new Diagnostico("La bateria hizo corto circuito");
@@ -60,14 +59,12 @@ class AgregarInspeccionUseCaseTest {
         when(repository.getEventsBy("054")).thenReturn(history());
         agregarInspeccionUseCase.addRepository(repository);
 
-        //act
         var events = UseCaseHandler.getInstance()
                 .setIdentifyExecutor(command.mecanicoId().value())
                 .syncExecutor(agregarInspeccionUseCase, new RequestCommand<>(command))
                 .orElseThrow()
                 .getDomainEvents();
 
-        //assert
         var event = (InspeccionAgregada) events.get(0);
         Assertions.assertEquals("La bateria hizo corto circuito",
                 event.diagnostico().value());

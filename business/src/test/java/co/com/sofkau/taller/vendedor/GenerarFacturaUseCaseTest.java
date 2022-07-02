@@ -19,8 +19,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -108,14 +106,11 @@ class GenerarFacturaUseCaseTest {
     private List<DomainEvent> eventStored(VendedorId vendedorId) {
         var tipoDePago = new TipoDePago(TipoDePago.Pago.CONTADO);
         var metodoDePago = new MetodoPago(MetodoPago.Metodo.EFECTIVO);
-        var salida = new Salida(LocalDateTime.now(), LocalDate.now());
-        var valorTotal = new ValorTotal(valorCompra, valorReparacion);
 
         return List.of(
                 new VendedorAsignado(vendedorId, nombreVendedor, telefonoVendedor, correoVendedor, clientes, listaAutos, listaRepuestos),
                 new CompraGenerada(vendedorId, valorCompra),
-                new VentaGenerada(vendedorId, tipoDePago, metodoDePago, valorReparacion),
-                new EntregaRealizada(vendedorId, salida, valorTotal)
+                new VentaGenerada(vendedorId, tipoDePago, metodoDePago, valorReparacion)
         );
     }
 

@@ -26,7 +26,7 @@ public class FacturaGenerada extends DomainEvent {
 
     public FacturaGenerada(FacturaId facturaId, VendedorId vendedorId, DatosCliente datosCliente, Set<DatosEmpresa> datosEmpresa, Set<DatosAuto> datosAutos, Set<ListaRepuestos> listaRepuestos,
                            ValorCompra valorCompra, ValorReparacion valorReparacion, ValorTotal valorTotal) {
-        super("co.com.sofkau.taller.vendedor.EntregaRealizada");
+        super("co.com.sofkau.taller.vendedor.FacturaGenerada");
         this.facturaId = facturaId;
         this.vendedorId = vendedorId;
         this.datosCliente = datosCliente;

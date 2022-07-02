@@ -8,7 +8,6 @@ import co.com.sofkau.taller.jefedepatio.commands.AgregarRegistro;
 import co.com.sofkau.taller.jefedepatio.events.AutoAgregado;
 import co.com.sofkau.taller.jefedepatio.events.ClienteAgregado;
 import co.com.sofkau.taller.jefedepatio.events.JefeDePatioAsignado;
-import co.com.sofkau.taller.jefedepatio.events.RegistroAgregado;
 import co.com.sofkau.taller.jefedepatio.values.*;
 import co.com.sofkau.taller.mecanico.values.MecanicoId;
 import co.com.sofkau.taller.valuesgeneric.Correo;
@@ -16,7 +15,6 @@ import co.com.sofkau.taller.valuesgeneric.Nombre;
 import co.com.sofkau.taller.valuesgeneric.Telefono;
 import co.com.sofkau.taller.valuesgeneric.TipoDeTrabajo;
 import co.com.sofkau.taller.vendedor.values.VendedorId;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -53,9 +51,7 @@ class AgregarRegistroUseCaseTest {
         var autoId = AutoId.of("11");
         var tipoDeTrabajo = new TipoDeTrabajo(TipoDeTrabajo.Tipos.REPARACION);
         var ingreso = new Ingreso(LocalDateTime.now(), LocalDate.now());
-        var autorizacionCliente = new AutorizacionCliente(AutorizacionCliente.Autorizacion.AUTORIZADO);
-        var command = new AgregarRegistro(registroId, jefeDePatioId, clienteId, autoId, tipoDeTrabajo, ingreso,
-                autorizacionCliente);
+        var command = new AgregarRegistro(registroId, jefeDePatioId, clienteId, autoId, tipoDeTrabajo, ingreso);
 
         when(repository.getEventsBy("01")).thenReturn(history());
         agregarRegistroUseCase.addRepository(repository);
@@ -66,10 +62,6 @@ class AgregarRegistroUseCaseTest {
                 .syncExecutor(agregarRegistroUseCase, new RequestCommand<>(command))
                 .orElseThrow()
                 .getDomainEvents();
-
-        var event = (RegistroAgregado) events.get(0);
-        Assertions.assertEquals(AutorizacionCliente.Autorizacion.AUTORIZADO, event.autorizacionCliente().value());
-
     }
 
     private List<DomainEvent> history() {
