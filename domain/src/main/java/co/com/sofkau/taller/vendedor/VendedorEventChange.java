@@ -35,12 +35,14 @@ public class VendedorEventChange extends EventChange {
         apply((VentaGenerada event) -> {
             var ventaId = new VentaId();
             var venta = new Venta(ventaId, event.tipoPago(), event.metodoPago(), event.valorReparacion());
+            vendedor.venta = new HashMap<>();
             vendedor.venta.put(ventaId, venta);
         });
 
         apply((CompraGenerada event) -> {
             var compraId = new CompraId();
             var compra = new Compra(compraId, event.valorCompra());
+            vendedor.compra = new HashMap<>();
             vendedor.compra.put(compraId, compra);
         });
 
