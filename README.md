@@ -29,17 +29,14 @@ Reto final donde se plantea un Modelo de Dominio para un Taller Automotriz reali
 ### Link Modelo de dominio
 + https://drive.google.com/file/d/1cpOiXQIoENSGUg_m3ZhYsgBd_DTmO7Zv/view?usp=sharing
 
-### Link Video de sustentación
-+ 
-
 
 ### Análisis
-![Reto_DDD-Analisis drawio](https://user-images.githubusercontent.com/83563182/176942090-c2a95241-b569-48f5-89cf-d4c66e64e40a.png)
+![Reto_DDD-Analisis drawio](https://user-images.githubusercontent.com/83563182/176984198-b69e71ab-6ece-4ac0-8f16-9e48bd04ba72.png)
 
 ### Modelamiento
-![Reto_DDD-Modelo de dominio drawio](https://user-images.githubusercontent.com/83563182/176942106-f3a4b35d-b0b1-440d-9cc9-d2630ed0ee61.png)
+![Reto_DDD-Modelo de dominio drawio](https://user-images.githubusercontent.com/83563182/176984201-2a93e89e-a6c4-445e-8791-fdc2a43612e8.png)
 
 ### Eventos de dominio
-![Reto_DDD-Eventos de dominio drawio](https://user-images.githubusercontent.com/83563182/176942118-d29ad4fb-ea1c-4a5b-9fa2-11d88512e46f.png)
+![Reto_DDD-Eventos de dominio drawio](https://user-images.githubusercontent.com/83563182/176984202-e320150e-5d64-4d44-bd86-4b47a0729bae.png)
 
 
